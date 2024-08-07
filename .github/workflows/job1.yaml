@@ -1,0 +1,13 @@
+name: Job1 Workflow
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: [linux, aks]
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run a script
+      run: echo "Hello, World! from Job1"
